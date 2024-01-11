@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather</title>
+    <link rel="shortcut icon" href="image/favicon.ico" sizes="150%" type="image/x-icon">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>What's the weather like in...</h1>
+        
+        <form action="/" method="post">
+            <!-- <label for="cityName">City Name:</label> -->
+            <input type="text" name="city" id="city-input" placeholder="Enter city name">
+            <select name="units" id="units-input">
+                <option value="standard">Kelvin</option>
+                <option value="metric">degrees Celsius</option>
+                <option value="imperial">Fahrenheit system</option>
+            </select>
+            <button type="submit" id="get-weather">Get Weather</button>
+        </form>
+        <div class="weather-info">
+          </div>
+      </div>
+    
+</body>
+</html>

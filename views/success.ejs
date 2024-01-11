@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("image/backGround.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        }
+
+        .header h1 {
+        margin: 0;
+        }
+
+        .container {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 10%;
+        /* text-align: center; */
+        color: white;
+        border: 1px solid #eee;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(71, 66, 66, 0.37);
+       }
+
+        /* .main {
+        padding: 20px;
+        width: 50%;
+        height: 50%;
+        } */
+
+        .current-weather {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        }
+
+        .current-weather img {
+        width: 70px;
+        height: 70px;
+        }
+
+        .details {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .details li {
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Current Weather, <%=City%></h1>
+        <span> <%=Date%></span>
+        
+    </div>
+    <div class="container">
+        <main class="main">
+            <div class="current-weather">
+            <img src= <%=img%> alt="Clouds and sun">
+            <div>
+                <h2> <%= Temp %>°C</h2>
+                <span>RealFeel <%=RealFeel%>°C</span>
+            </div>
+            </div>
+            <ul class="details">
+            <li>RealFeel Shade™ 21°</li>
+            <li>Max UV Index 4 Moderate</li>
+            <li>Wind NNW 9 km/h</li>
+            <li>Humidity 50%</li>
+            <li>Visibility 10 km</li>
+            </ul>
+            <form action="/"><button>Back</button></form>
+        </main>
+    </div>
+</body>
+</html>
